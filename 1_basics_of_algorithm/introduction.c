@@ -1,6 +1,16 @@
 #include<stdio.h>
 
 /*
+## Recursive and Non-recursive Algorithms
+    - Recursive sorting algorithms work by splitting the input into two or more smaller inputs 
+      and then sorting those,
+      then combining the results.
+      eg. Merge sort and quick sort
+
+    - A non-recursive technique is anything that doesn't use recursion.
+    - it does the sorting all at once, without calling itself
+      eg. Insertion sort, bubble sort
+
 ## Asymptotic Analysis
     - evaluate the performance of an algorithm in terms of input size
     - no measurement of actual running time

@@ -11,7 +11,10 @@ void displayArray(int arr[], int n) {
         printf("%d\t",arr[i]);
 }
 
-// BUBBLE SORT
+/*
+## BUBBLE SORT
+    Time Complexity = O(n^2)
+*/
 void bubbleSort(int arr[], int n) {
     int temp;
 
@@ -28,7 +31,10 @@ void bubbleSort(int arr[], int n) {
     }
 }
 
-//INSERTION SORT
+/*
+## INSERTION SORT
+    Time Complexity = O(n^2)
+*/
 void insertionSort(int arr[], int n) {
     int temp;
     

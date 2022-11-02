@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 
 void displayArray(int arr[], int n) {
     for(int i = 0; i < n; i++)
@@ -8,11 +7,14 @@ void displayArray(int arr[], int n) {
 
 /*
 ## Counting Sort
+    Time Complexity = O(n+k)
 
     - find max element in the array
     - create a new array for count with size = (max + 1)
+    - this will give us an array with maximum index = max
 
     - the index of count array will represent the values in the input array
+    - as indices are already in increasing order, we already have a sorted sequence
     - the value of count array will be the frequency of occurrence of the index in the input array
     - set all values of count array = 0
 
@@ -20,11 +22,12 @@ void displayArray(int arr[], int n) {
 
     - store cumulative sum of elements in count array
 
-    - find (element in input array) in indices of count array
+    - find (element in input array) in indices of count array (iterate the array in reverse manner)
     - in output array, store the element at (this value - 1)
     - decrement the value in count array
 
     - copy the output array to the input array
+
 */
 void countingSort(int arr[], int n) {
     int output[n];
@@ -70,17 +73,10 @@ void main() {
     printf("%d", n);
 
 
-    // printf("\nCounting Sort:");
-    // printf("\nInput Array:\n");
-    // displayArray(array, n);
-    // countingSort(array, n);
-    // printf("\nSorted Array:\n");
-    // displayArray(array, n);
-
-    printf("\nRadix Sort:");
+    printf("\nCounting Sort:");
     printf("\nInput Array:\n");
     displayArray(array, n);
-    radixSort(array, n);
+    countingSort(array, n);
     printf("\nSorted Array:\n");
     displayArray(array, n);
 
